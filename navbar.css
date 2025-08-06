@@ -1,0 +1,203 @@
+/* ===== NAVBAR RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== NAVBAR CONTAINER ===== */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(33, 36, 61, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  padding-left: 8px;
+}
+
+.nav-logo {
+  width: 28px;
+  height: auto;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffca28;
+}
+
+/* ===== STREAMS SPECIAL LINK ===== */
+.nav-links li a.streams-link {
+  border: 2px solid #ffca28;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* ===== SIMPLE DROPDOWN MENU ===== */
+.nav-links li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  min-width: 180px;
+  z-index: 999;
+}
+
+.nav-links li ul li {
+  width: 100%;
+}
+
+.nav-links li ul li a {
+  display: block;
+  padding: 10px 16px;
+  color: black;
+  font-weight: 500;
+}
+
+.nav-links li ul li a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* ===== SHOW DROPDOWN ON HOVER ===== */
+.nav-links li:hover ul {
+  display: block;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ===== MOBILE NAVBAR ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f3dff3, #d6f1fd);
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 16px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    padding-left: 8px;
+  }
+
+  .mobile-logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    gap: 10px;
+    text-transform: uppercase;
+  }
+
+  .mobile-logo img {
+    width: 38px;
+    height: auto;
+  }
+
+  /* ===== MOBILE DROPDOWN STYLE ===== */
+  .nav-links li ul {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .nav-links li ul li a {
+    padding: 12px 40px;
+  }
+
+  /* ===== HIDE STREAMS BORDER ON MOBILE ===== */
+  .nav-links li a.streams-link {
+    border: none;
+    padding: 16px 25px;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-logo {
+    display: none;
+  }
+}

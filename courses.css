@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(to left, #f3dff3, #d6f1fd);
+  color: #000;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 150px 20px 0px;
+  text-align: center;
+  background: linear-gradient(to right, #d6f1fd, #f3dff3);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Courses Section */
+.courses-section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  color: #000;
+}
+
+/* Two-column course + button layout */
+.course-section-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.course-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  align-items: center;
+}
+
+.enroll-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+}
+
+/* Course Card */
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Enroll Button */
+.enroll-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ffca28;
+  color: #222;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.enroll-btn:hover {
+  background-color: #fdd835;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .section-title {
+    text-align: center;
+  }
+  
+  /* Stack courses and button */
+  .course-section-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .enroll-column {
+    min-width: unset;
+    margin-top: 10px;
+  }
+}

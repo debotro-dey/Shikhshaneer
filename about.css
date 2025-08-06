@@ -1,0 +1,438 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(to left, #f3dff3, #d6f1fd);
+  color: rgb(0, 0, 0);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(33, 36, 61, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  padding-left: 8px;
+}
+
+.nav-logo {
+  width: 28px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffca28;
+}
+
+/* Streams yellow border */
+.nav-links li a.streams-link {
+  border: 2px solid #ffca28;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Simple Dropdown Menu */
+.nav-links li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  min-width: 180px;
+  z-index: 999;
+}
+
+.nav-links li ul li {
+  width: 100%;
+}
+
+.nav-links li ul li a {
+  display: block;
+  padding: 10px 16px;
+  color: black;
+  font-weight: 500;
+}
+
+.nav-links li ul li a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Show dropdown on hover */
+.nav-links li:hover ul {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 150px 20px 80px;
+  text-align: center;
+  background: linear-gradient(to right, #d6f1fd, #f3dff3);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  flex: 1 1 480px;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.know-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ffca28;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+.know-more-btn:hover {
+  background-color: #fdd835;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Science & Commerce Section (Restored Old Theme) */
+.science-commerce {
+  background: linear-gradient(to right, #1e1e2f, #2e2e4f);
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.science-commerce .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.science-commerce .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.science-commerce .section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Faculty Section */
+.faculty-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.faculty-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.faculty-text {
+  flex: 1;
+  min-width: 280px;
+  color: white;
+}
+
+.faculty-text .section-subtitle {
+  font-size: 1.4rem;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.faculty-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.science-commerce .section-title,
+.science-commerce .section-subtitle {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .science-commerce .section-title,
+  .science-commerce .section-subtitle {
+    text-align: center;
+  }
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f3dff3, #d6f1fd);
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 16px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    padding-left: 8px;
+  }
+
+  .mobile-logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    gap: 10px;
+    text-transform: uppercase;
+  }
+
+  .mobile-logo img {
+    width: 38px;
+    height: auto;
+  }
+
+  .about-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+
+  .faculty-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .faculty-text {
+    padding: 0 10px;
+  }
+
+  .faculty-description {
+    text-align: center;
+  }
+
+  /* Mobile dropdown style */
+  .nav-links li ul {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .nav-links li ul li a {
+    padding: 12px 40px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-logo {
+    display: none;
+  }
+}
+
+/* Hide yellow border for Streams link on mobile */
+@media (max-width: 768px) {
+  .nav-links li a.streams-link {
+    border: none;
+    padding: 16px 25px; /* match other mobile menu items */
+    border-radius: 0;
+  }
+}
+
+.humanities {
+   background: linear-gradient(to left, #404268, #5b5d84);
+  padding: 80px 20px;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.humanities .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.humanities .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.humanities .section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .humanities .section-title,
+  .humanities .section-subtitle {
+    text-align: center;
+  }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shikhshaneer</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="shikhshaneer-logo.png" type="image/png" />
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <!-- Navbar -->
+ <nav class="navbar">
+  <div class="logo">
+    <img src="shikhshaneer-logo.png" alt="Shikhshaneer Logo" class="nav-logo">
+    SHIKHSHANEER
+  </div>
+  
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    
+    <!-- Streams Dropdown -->
+    <li>
+      <a href="#" class="streams-link">Streams ▼</a>
+      <ul>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Commerce</a></li>
+        <li><a href="#">Humanities</a></li>
+        <li><a href="#">Higher Studies</a></li>
+      </ul>
+    </li>
+
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop class="bg-video">
+      <source src="intro-video.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="shikhshaneer-logo.png" alt="Hero Logo" class="hero-logo" />
+      <h1>A Unit Of Excellence,</h1>
+      <p>Provides Homely Environment With Individual Attention.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container about-flex">
+      <div class="about-text">
+        <h2>About Shikhshaneer</h2>
+        <p>
+          Shikhshaneer is a nurturing space for learning, growth, and excellence. We empower young minds with knowledge,
+          values, and creativity.
+          <br><br>
+
+          Our institution believes in creating a supportive environment where every student feels at home. With
+          experienced educators, a vibrant curriculum, and a strong emphasis on holistic development, we ensure that
+          learners not only gain academic knowledge but also life skills that shape their future.
+        </p>
+        <a href="about.html" class="know-more-btn">Know More</a>
+      </div>
+
+      <div class="about-img">
+        <img src="shikhshaneer2.jpg" alt="Shikhshaneer Campus">
+      </div>
+    </div>
+  </section>
+
+  <!-- Streams Section -->
+  <section class="about animate" id="streams">
+    <div class="container">
+      <h2>Streams</h2>
+      <div class="streams">
+        <a href="#" class="stream-card">
+          <h3>Science</h3>
+          <p>Explore scientific learning and lab-based studies.</p>
+        </a>
+        <a href="#" class="stream-card">
+          <h3>Commerce</h3>
+          <p>Discover business, finance, and trade knowledge.</p>
+        </a>
+        <a href="#" class="stream-card">
+          <h3>Humanities</h3>
+          <p>Delve into creativity, humanities, and expression.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery animate" id="gallery">
+    <div class="container">
+      <h2>Photos & Videos</h2>
+      <div class="gallery-grid">
+        <img src="Gallery/gallery1.jpg" alt="Gallery 1" />
+        <img src="Gallery/gallery13.jpg" alt="Gallery 2" />
+        <img src="Gallery/gallery3.jpg" alt="Gallery 3" />
+        <img src="Gallery/gallery16.jpg" alt="Gallery 4" />
+        <img src="Gallery/gallery5.jpg" alt="Gallery 5" />
+        <img src="Gallery/gallery17.jpg" alt="Gallery 6" />
+        <div class="gallery-button-wrapper">
+          <a href="gallery.html" class="all-btn">View All</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="youtube-channels">
+    <h2 style="text-align: center; color: white; margin-bottom: 30px;">Our YouTube Channels</h2>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+
+      <!-- Humanities Department -->
+      <div class="channel-box" style="max-width: 400px; text-align: center;">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/Wb9O-fixdI4" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <p style="color: gold; font-weight: bold; margin-top: 10px;">
+          Humanities Department
+        </p>
+      </div>
+
+      <!-- Science & Commerce Department -->
+      <div class="channel-box" style="max-width: 400px; text-align: center;">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/aDve-EwUuM0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <p style="color: gold; font-weight: bold; margin-top: 10px;">
+          Science & Commerce Department
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Scroll to Top Button -->
+  <button class="fab" onclick="scrollToTop()">↑</button>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 Shikhshaneer. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
